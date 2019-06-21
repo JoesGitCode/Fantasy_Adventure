@@ -22,6 +22,12 @@ public class NormalEnemyTest {
     }
 
     @Test
+    public void canTakeDamage(){
+        normalEnemy.loseHealth(10);
+        assertEquals(10, normalEnemy.getHealth());
+    }
+
+    @Test
     public void aNormalEnemyHasRandomHealthBetween10and20(){
         normalEnemy.setRandomHealth();
         System.out.println("NormalEnemy health: " + normalEnemy.getHealth());

@@ -11,6 +11,4 @@ public interface Melee{
 
     int getWeaponDamage();
 
-
-
 }

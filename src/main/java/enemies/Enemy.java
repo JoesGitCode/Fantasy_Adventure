@@ -1,5 +1,7 @@
 package enemies;
 
+import player.Player;
+
 public abstract class Enemy {
 
     private String name;
@@ -22,6 +24,21 @@ public abstract class Enemy {
 
     public int getDamage() {
         return damage;
+    }
+
+    public void attack(Player player){
+        player.loseHealth(damage);
+    }
+
+    public void loseHealth(int value){
+        health -= value;
+        if (health <= 0){
+            enemyDead();
+        }
+    }
+
+    public String enemyDead(){
+        return "PLACEHOLDER Enemy Dead.... something happens";
     }
 
     public void setRandomHealth(){
