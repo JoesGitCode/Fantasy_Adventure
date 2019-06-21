@@ -4,6 +4,7 @@ import org.junit.Before;
 import enemies.Boss;
 import org.junit.Test;
 
+import static junit.framework.Assert.assertNotSame;
 import static junit.framework.TestCase.assertEquals;
 
 public class BossTest {
@@ -12,7 +13,7 @@ public class BossTest {
 
     @Before
     public void before(){
-        boss = new Boss("Eamonn Holmes", 50, 20);
+        boss = new Boss("Eamonn Holmes", 20, 20);
     }
 
     @Test
@@ -21,13 +22,17 @@ public class BossTest {
     }
 
     @Test
-    public void aBossHasHealth(){
-        assertEquals(50, boss.getHealth());
+    public void aBossHasRandomHealthBetween30and40(){
+        boss.setBossHealth();
+        System.out.println("Boss health: " + boss.getHealth());
+        assertNotSame( 9, boss.getHealth());
     }
 
     @Test
-    public void aBossHasDamage(){
-        assertEquals(20, boss.getDamage());
+    public void aBossHasDamageBetween15and20(){
+        boss.setBossDamage();
+        System.out.println("Boss damage: " + boss.getDamage());
+        assertNotSame(14, boss.getDamage());
     }
 
 
