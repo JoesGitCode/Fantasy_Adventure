@@ -1,4 +1,4 @@
-package player.enemies;
+package enemies;
 
 public abstract class Enemy {
 

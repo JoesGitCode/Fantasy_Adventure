@@ -1,4 +1,4 @@
-package player.rooms;
+package rooms;
 
 public class Rooms {
 }
