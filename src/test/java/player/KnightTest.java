@@ -15,6 +15,11 @@ public class KnightTest {
     }
 
     @Test
+    public void canGetKightName(){
+        assertEquals("Sir Berreck", knight.getName());
+    }
+
+    @Test
     public void hasArmour(){
         assertEquals(3 ,knight.getArmour());
     }
