@@ -8,12 +8,12 @@ public class Boss extends Enemy {
     }
 
     public void setBossHealth(){
-        setHealth();
+        setRandomHealth();
         health += 20;
     }
 
     public void setBossDamage(){
-        setDamage();
+        setRandomDamage();
         damage += 10;
     }
 

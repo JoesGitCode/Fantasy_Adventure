@@ -7,4 +7,11 @@ public class NormalEnemy extends Enemy {
         super(name, health, damage);
     }
 
+
+    public void generateRandomNormalEnemy(){
+        setRandomName();
+        setRandomDamage();
+        setRandomHealth();
+    }
+
 }
