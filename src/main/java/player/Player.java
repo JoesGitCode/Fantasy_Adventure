@@ -23,6 +23,6 @@ public abstract class Player  {
     }
 
     public String playerDead(){
-        return "PLACEHOLDER Enemy Dead.... something happens";
+        return "PLACEHOLDER player Dead.... something happens";
     }
 }
