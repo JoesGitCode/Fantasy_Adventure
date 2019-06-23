@@ -2,8 +2,7 @@ package player;
 
 import org.junit.Before;
 import org.junit.Test;
-import player.Barbarian;
-import player.weapon.Weapon;
+import player.items.Weapon;
 
 import static org.junit.Assert.assertEquals;
 

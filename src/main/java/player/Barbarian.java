@@ -1,6 +1,6 @@
 package player;
 
-import player.weapon.Weapon;
+import player.items.Weapon;
 
 public class Barbarian extends Player implements Melee{
 

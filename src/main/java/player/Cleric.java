@@ -1,5 +1,7 @@
 package player;
 
+import player.items.HealingItem;
+
 import java.util.ArrayList;
 
 public class Cleric extends Player{
@@ -8,9 +10,9 @@ public class Cleric extends Player{
 
 
 
-    public Cleric(){
+    public Cleric(String name){
         super(name);
-        this.healingItems = new ArrayList<>();
+        this.healingItems = new ArrayList<HealingItem>();
 
     }
 

@@ -1,6 +1,6 @@
 package player;
 
-import player.weapon.Weapon;
+import player.items.Weapon;
 
 public class Knight extends Player implements Melee{
 

@@ -1,4 +1,4 @@
-package player.weapon;
+package player.items;
 
 public enum Weapon {
 
