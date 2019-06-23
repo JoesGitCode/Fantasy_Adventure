@@ -16,7 +16,7 @@ public class WizardTest {
     public void before(){
         currentSpell = new Spell("Spark", 4, 10, SpellTarget.SINGLE);
 
-        wizard = new Wizard("Glindorf", 100, currentSpell);
+        wizard = new Wizard("Glindorf", 10, 10, currentSpell);
     }
 
     @Test
