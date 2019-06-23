@@ -14,6 +14,10 @@ public abstract class Player  {
         return name;
     }
 
+    public int getHealth(){
+        return health;
+    }
+
 
     public void loseHealth(int value){
         health -= value;

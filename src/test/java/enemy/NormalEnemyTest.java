@@ -1,8 +1,11 @@
 package enemy;
 
+import org.junit.Assert;
 import org.junit.Before;
 import enemies.NormalEnemy;
 import org.junit.Test;
+import player.Barbarian;
+import player.Player;
 
 import static junit.framework.Assert.assertNotSame;
 import static junit.framework.TestCase.assertEquals;
@@ -10,10 +13,12 @@ import static junit.framework.TestCase.assertEquals;
 public class NormalEnemyTest {
 
     NormalEnemy normalEnemy;
+    Barbarian player;
 
     @Before
     public void before(){
-        normalEnemy = new NormalEnemy("Sebulba", 20, 20);
+        normalEnemy = new NormalEnemy("Sebulba", 20, 15);
+        player = new Barbarian("Grub Grub", 20);
     }
 
     @Test
@@ -55,8 +60,18 @@ public class NormalEnemyTest {
         System.out.println("Health: " + normalEnemy.getHealth());
         System.out.println("Damage: " + normalEnemy.getDamage());
         assertNotSame("i dont know how to test this", normalEnemy.getName());
+    }
 
+    @Test
+    public void canTakeDamageFromPlayer(){
+        player.attack(normalEnemy);
+        Assert.assertEquals(13, normalEnemy.getHealth());
+    }
 
+    @Test
+    public void canGiveDamageToPlayer(){
+        normalEnemy.attack(player);
+        Assert.assertEquals(5, player.getHealth());
     }
 
 
