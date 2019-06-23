@@ -1,6 +1,8 @@
 package enemies;
 
-public class NormalEnemy extends Enemy {
+import rooms.IRoomable;
+
+public class NormalEnemy extends Enemy implements IRoomable {
 
 
     public NormalEnemy(String name, int health, int damage){

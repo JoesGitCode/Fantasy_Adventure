@@ -1,6 +1,8 @@
 package enemies;
 
-public class Boss extends Enemy {
+import rooms.IRoomable;
+
+public class Boss extends Enemy implements IRoomable {
 
     public Boss(String name, int health, int damage){
         super(name, health, damage);
