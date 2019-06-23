@@ -18,4 +18,7 @@ public class Room {
         roomContents.add(content);
     }
 
+    public void clearRoom() {
+        roomContents.clear();
+    }
 }

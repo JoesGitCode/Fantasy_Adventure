@@ -29,5 +29,12 @@ public class RoomTest {
         assertEquals(1, room.numberOfContents());
     }
 
+    @Test
+    public void aRoomCanBeCleared(){
+        room.addContent(normalEnemy);
+        room.clearRoom();
+        assertEquals(0, room.numberOfContents());
+    }
+
 
 }
