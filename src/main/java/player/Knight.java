@@ -1,14 +1,16 @@
 package player;
 
 import player.items.Weapon;
+import enemies.Enemy;
+
 
 public class Knight extends Player implements Melee{
 
     private Weapon weapon;
     private int armour;
 
-    public Knight(String name) {
-        super(name);
+    public Knight(String name, int health) {
+        super(name, health);
         this.weapon = Weapon.LONGSWORD;
         this.armour = 3;
     }
@@ -23,6 +25,10 @@ public class Knight extends Player implements Melee{
 
     public int getWeaponDamage() {
         return this.weapon.getDamage();
+    }
+
+    public void attack(Enemy enemy){
+        enemy.loseHealth(getWeaponDamage());
     }
 
     public int getArmour() {

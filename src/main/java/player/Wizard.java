@@ -12,8 +12,8 @@ public class Wizard extends Player implements Magic{
     private Spell currentSpell;
     private ArrayList<Spell> spells;
 
-    public Wizard(String name, int maxMana, Spell currentSpell){
-        super(name);
+    public Wizard(String name, int health, int maxMana, Spell currentSpell){
+        super(name, health);
         this.maxMana = 100;
         this.currentMana = 100;
         this.spells = new ArrayList<Spell>();

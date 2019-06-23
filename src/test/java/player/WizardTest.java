@@ -2,16 +2,21 @@ package player;
 
 import org.junit.Before;
 import org.junit.Test;
+import player.spells.Spell;
+import player.spells.SpellTarget;
 
 import static junit.framework.TestCase.assertEquals;
 
 public class WizardTest {
 
     Wizard wizard;
+    Spell currentSpell;
 
     @Before
     public void before(){
-        wizard = new Wizard("Glindorf", 100);
+        currentSpell = new Spell("Spark", 4, 10, SpellTarget.SINGLE);
+
+        wizard = new Wizard("Glindorf", 20, 100, currentSpell);
     }
 
     @Test

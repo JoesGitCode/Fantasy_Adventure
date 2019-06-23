@@ -12,7 +12,7 @@ public class BarbarianTest {
 
     @Before
     public void before(){
-        barbarian = new Barbarian("Grub Grub");
+        barbarian = new Barbarian("Grub Grub", 20);
     }
 
 

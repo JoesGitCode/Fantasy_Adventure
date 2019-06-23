@@ -11,7 +11,7 @@ public class KnightTest {
 
     @Before
     public void before(){
-        knight = new Knight("Sir Berreck");
+        knight = new Knight("Sir Berreck", 20);
     }
 
     @Test
