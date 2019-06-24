@@ -3,7 +3,7 @@ package player;
 public abstract class Player  {
 
     private String name;
-    private int health;
+    protected int health;
 
     public Player(String name, int health) {
         this.name = name;
@@ -12,6 +12,10 @@ public abstract class Player  {
 
     public String getName() {
         return name;
+    }
+
+    public int getHealth(){
+        return health;
     }
 
 
