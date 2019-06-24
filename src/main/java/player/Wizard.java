@@ -38,6 +38,7 @@ public class Wizard extends Player implements Magic{
 
     public void changeSpell(Spell spell){
         int index = spells.indexOf(spell);
-        this.spells.get(index);
+        Spell spellToEquip = this.spells.get(index);
+        this.currentSpell = spellToEquip;
     }
 }
