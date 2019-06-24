@@ -33,6 +33,13 @@ public class Game {
         // array of bosses? when defeated, delete from array. empty array = game win
     }
 
+    public void createCharacter(){
+        // scanner do you want healer, melee, magic
+
+    }
+
+
+
 
 
 }
