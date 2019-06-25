@@ -1,6 +1,8 @@
 package rooms;
 
+import enemies.Enemy;
 import enemies.NormalEnemy;
+import player.Player;
 
 import java.util.ArrayList;
 
@@ -23,6 +25,12 @@ public class Room {
     public void clearRoom() {
         roomContents.clear();
     }
+
+//    public void enemyTurn(Player player){
+//        for (IRoomable enemy: roomContents){
+//            enemy.attack(player);
+//        }
+//    }
 
     public NormalEnemy generateNormalEnemy(){
         String name = generateNormalEnemyName();

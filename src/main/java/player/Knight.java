@@ -3,7 +3,7 @@ package player;
 import enemies.Enemy;
 import player.weapon.Weapon;
 
-public class Knight extends Player implements Melee{
+public class Knight extends Player implements Melee, IPlayable{
 
     private Weapon weapon;
     private int armour;

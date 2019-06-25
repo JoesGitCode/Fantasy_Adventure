@@ -5,7 +5,7 @@ import player.spells.SpellTarget;
 
 import java.util.ArrayList;
 
-public class Wizard extends Player implements Magic{
+public class Wizard extends Player implements Magic, IPlayable{
 
     private int maxMana;
     private int currentMana;

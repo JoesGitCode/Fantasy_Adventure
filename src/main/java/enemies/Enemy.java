@@ -26,10 +26,6 @@ public abstract class Enemy {
         return damage;
     }
 
-    public void attack(Player player){
-        player.loseHealth(damage);
-    }
-
     public void loseHealth(int value){
         health -= value;
         if (health <= 0){

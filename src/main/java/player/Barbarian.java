@@ -3,7 +3,7 @@ package player;
 import enemies.Enemy;
 import player.weapon.Weapon;
 
-public class Barbarian extends Player implements Melee{
+public class Barbarian extends Player implements Melee, IPlayable{
 
     private Weapon weapon;
 

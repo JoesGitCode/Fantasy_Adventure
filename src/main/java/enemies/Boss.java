@@ -1,5 +1,6 @@
 package enemies;
 
+import player.Player;
 import rooms.IRoomable;
 
 public class Boss extends Enemy implements IRoomable {
@@ -18,6 +19,11 @@ public class Boss extends Enemy implements IRoomable {
         setRandomDamage();
         damage += 10;
     }
+
+    public void attack(Player player){
+        player.loseHealth(damage);
+    }
+
 
     public void setRandomName(){
         String namesAdjectives[] = {"Ancient ", "Armored ", "Bearded ", "Handsome ", "Giant ", "Zombie ", "Racist ", "Eight-Legged"};
