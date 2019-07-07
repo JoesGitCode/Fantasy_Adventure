@@ -1,5 +1,6 @@
 package enemies;
 
+import player.IPlayable;
 import player.Player;
 import rooms.IRoomable;
 
@@ -10,7 +11,7 @@ public class NormalEnemy extends Enemy implements IRoomable {
         super(name, health, damage);
     }
 
-    public void attack(Player player){
+    public void attack(IPlayable player){
         player.loseHealth(damage);
     }
 

@@ -1,5 +1,6 @@
 package enemies;
 
+import player.IPlayable;
 import player.Player;
 import rooms.IRoomable;
 
@@ -9,6 +10,11 @@ public class Boss extends Enemy implements IRoomable {
         super(name, health, damage);
 
     }
+
+    public void attack(IPlayable player){
+        player.loseHealth(damage);
+    }
+
 
     public void setBossHealth(){
         setRandomHealth();

@@ -19,6 +19,7 @@ public class Game {
 
     public Game(){
         this.iPlayables = new ArrayList<IPlayable>();
+        this.room = new Room();
         this.roomContents = new ArrayList<IRoomable>();
         gameStart();
     }
@@ -27,7 +28,8 @@ public class Game {
         createCharacter();
         directionChoice();
         generateRandomRoom();
-        System.out.println(roomContents);
+        System.out.println(roomContents.size());
+        enemyTurn();
         // player selects a character/weapon somehow. text input with big if statement for multiple choices?
         // multiple players added to party array?
         // player selects a direction (this wont matter)
@@ -100,13 +102,37 @@ public class Game {
     }
 
     public void generateRandomRoom(){
-        roomContents.add(room.generateNormalEnemy());
+        NormalEnemy enemy = room.generateNormalEnemy();
+        roomContents.add(enemy);
+        System.out.println("You idiot, you've walked into a room containing a " + enemy.name);
+        System.out.println("It's got " + enemy.health + " health and does " + enemy.damage + " damage" );
+        System.out.println("What will you do? fight, run");
     }
 
-//    public void enemyTurn(){
-//        for (IPlayable player : iPlayables){
-//            room.enemyTurn(player);
-//
+    public void enemyTurn(){
+        for (IPlayable player: iPlayables)
+        room.enemyTurn(player);
+//        System.out.println(player.);
+    }
+
+//    public void playerTurn(){
+//        for (IRoomable enemy: roomContents){
+//            IPlayable player
+//        }
+//    }
+
+    // for each player in the playerArray
+    // attack an enemy
+    // if the enemy's health is less than zero
+    // you win
+    // else play enemies turn
+
+
+
+//    public void fightOrRun(){
+//        if(){
+//        } else {
+//            generateRandomRoom();
 //        }
 //    }
 
